@@ -45,6 +45,16 @@ return [
             ],
         ],
         */
+        'view' => [
+            'theme' => [
+                'basePath' => '@backend/themes/shop',
+                'baseUrl' => '@web/themes/shop',
+                'pathMap' => [
+                    '@backend/themes/shop',
+                    '@backend/themes/basis'
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];

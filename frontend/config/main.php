@@ -44,6 +44,15 @@ return [
             ],
         ],
         */
+        'view' => [
+            'theme' => [
+                'basePath' => '@frontend/themes/EShopper',
+                'baseUrl' => '@web/themes/EShopper',
+                'pathMap' => [
+                    '@frontend/themes/EShopper'
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];
