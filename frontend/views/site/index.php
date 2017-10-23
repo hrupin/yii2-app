@@ -13,6 +13,9 @@ $this->title = 'My Yii Application';
         <p>
             Developer hook
         </p>
+        <p>
+            Developer hook
+        </p>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
