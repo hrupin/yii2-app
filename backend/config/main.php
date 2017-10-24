@@ -48,8 +48,10 @@ return [
                 'basePath' => '@backend/themes/shop',
                 'baseUrl' => '@web/themes/shop',
                 'pathMap' => [
-                    '@backend/themes/shop',
-                    '@backend/themes/basis'
+                    '@backend/views' => [
+                        '@backend/themes/shop/views',
+                        '@backend/themes/basis/views'
+                    ]
                 ],
             ],
         ],

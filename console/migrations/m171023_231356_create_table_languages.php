@@ -20,11 +20,11 @@ class m171023_231356_create_table_languages extends Migration
             'local' => $this->string(255)->notNull(),
             'name' => $this->string(255)->notNull(),
             'default' => $this->smallInteger()->notNull()->defaultValue(0),
-            'date_update' => $this->integer()->notNull(),
-            'date_create' => $this->integer()->notNull(),
+            'updated_at' => $this->integer()->notNull(),
+            'created_at' => $this->integer()->notNull(),
         ], $tableOptions);
 
-        $this->batchInsert('languages', ['url', 'local', 'name', 'default', 'date_update', 'date_create'], [
+        $this->batchInsert('languages', ['url', 'local', 'name', 'default', 'updated_at', 'created_at'], [
             ['en', 'en-EN', 'English', 0, time(), time()],
             ['ru', 'ru-RU', 'Русский', 1, time(), time()],
         ]);

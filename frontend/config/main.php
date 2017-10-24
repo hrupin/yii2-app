@@ -14,6 +14,7 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
+            'class' => 'common\models\entities\base\AppRequest'
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -45,9 +46,10 @@ return [
         'view' => [
             'theme' => [
                 'basePath' => '@frontend/themes/EShopper',
-                'baseUrl' => '@web/themes/EShopper',
+                'baseUrl' => '@frontend/themes/EShopper',
                 'pathMap' => [
-                    '@frontend/themes/EShopper'
+                    '@frontend/views' => '@frontend/themes/EShopper/views',
+                    '@frontend/views/modules' => '@frontend/themes/EShopper/views/modules'
                 ],
             ],
         ],
