@@ -37,9 +37,6 @@ return [
         },
     ],
     'modules' => [
-        'user' => [
-            'as frontend' => 'dektrium\user\filters\FrontendFilter',
-        ],
         'v1' => [
             'class' => 'api\modules\v1',
         ],
