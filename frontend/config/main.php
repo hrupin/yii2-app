@@ -37,11 +37,11 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-            'frontendUrlManager' => require __DIR__ . '/urlManager.php',
-            'backendUrlManager' => require __DIR__ . '/../../backend/config/urlManager.php',
-            'apiUrlManager' => require __DIR__ . '/../../api/config/urlManager.php',
-            'urlManager' => function () {
-                return Yii::$app->get('frontendUrlManager');
+        'frontendUrlManager' => require __DIR__ . '/urlManager.php',
+        'backendUrlManager' => require __DIR__ . '/../../backend/config/urlManager.php',
+        'apiUrlManager' => require __DIR__ . '/../../api/config/urlManager.php',
+        'urlManager' => function () {
+            return Yii::$app->get('frontendUrlManager');
         },
         'view' => [
             'theme' => [

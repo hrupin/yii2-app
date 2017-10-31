@@ -33,9 +33,9 @@ return [
         'backendUrlManager' => require __DIR__ . '/../../backend/config/urlManager.php',
         'frontendUrlManager' => require __DIR__ . '/../../frontend/config/urlManager.php',
         'apiUrlManager' => require __DIR__ . '/../../api/config/urlManager.php',
-        'urlManager' => function () {
-            return Yii::$app->get('consoleUrlManager');
-        },
+//        'urlManager' => function () {
+//            return Yii::$app->get('consoleUrlManager');
+//        },
     ],
     'params' => $params,
 ];

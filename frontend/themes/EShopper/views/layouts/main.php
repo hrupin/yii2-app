@@ -8,9 +8,7 @@ use frontend\assets\AppAsset;
 use frontend\themes\EShopper\assets\EShopperAsset;
 
 AppAsset::register($this);
-
-$bundle = EShopperAsset::register($this);
-Yii::$app->params['themePath'] = $bundle->baseUrl;
+EShopperAsset::register($this);
 
 ?>
 <?php $this->beginPage() ?>

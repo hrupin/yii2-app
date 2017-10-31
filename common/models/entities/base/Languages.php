@@ -1,4 +1,5 @@
 <?php
+
 namespace common\models\entities\base;
 
 use Yii;

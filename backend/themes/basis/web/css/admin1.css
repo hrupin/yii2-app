@@ -291,8 +291,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../../globals/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot');
-  src: url('../../globals/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../globals/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../globals/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../globals/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../globals/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../plugins/bootstrap/fonts/glyphicons-halflings-regular.eot');
+  src: url('../plugins/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../plugins/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../plugins/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -6553,8 +6553,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../../globals/plugins/fontawesome/fonts/fontawesome-webfont.eot?v=4.3.0');
-  src: url('../../globals/plugins/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../../globals/plugins/fontawesome/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../../globals/plugins/fontawesome/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../../globals/plugins/fontawesome/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../../globals/plugins/fontawesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  src: url('../plugins/fontawesome/fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('../plugins/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../plugins/fontawesome/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../plugins/fontawesome/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../plugins/fontawesome/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../plugins/fontawesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -8358,8 +8358,8 @@ MIT License: https://github.com/driftyco/ionicons
 */
 @font-face {
   font-family: "Ionicons";
-  src: url("../../globals/plugins/ionicons/fonts/ionicons.eot?v=2.0.0");
-  src: url("../../globals/plugins/ionicons/fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), url("../../globals/plugins/ionicons/fonts/ionicons.ttf?v=2.0.0") format("truetype"), url("../../globals/plugins/ionicons/fonts/ionicons.woff?v=2.0.0") format("woff"), url("../../globals/plugins/ionicons/fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");
+  src: url("../plugins/ionicons/fonts/ionicons.eot?v=2.0.0");
+  src: url("../plugins/ionicons/fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), url("../plugins/ionicons/fonts/ionicons.ttf?v=2.0.0") format("truetype"), url("../plugins/ionicons/fonts/ionicons.woff?v=2.0.0") format("woff"), url("../plugins/ionicons/fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -11336,8 +11336,8 @@ MIT License: https://github.com/driftyco/ionicons
  */
 @font-face {
   font-family: 'weathericons';
-  src: url('../../globals/plugins/weather-icons/font/weathericons-regular-webfont.eot');
-  src: url('../../globals/plugins/weather-icons/font/weathericons-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../../globals/plugins/weather-icons/font/weathericons-regular-webfont.woff') format('woff'), url('../../globals/plugins/weather-icons/font/weathericons-regular-webfont.ttf') format('truetype'), url('../../globals/plugins/weather-icons/font/weathericons-regular-webfont.svg#weathericons-regular-webfontRg') format('svg');
+  src: url('../plugins/weather-icons/font/weathericons-regular-webfont.eot');
+  src: url('../plugins/weather-icons/font/weathericons-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../plugins/weather-icons/font/weathericons-regular-webfont.woff') format('woff'), url('../plugins/weather-icons/font/weathericons-regular-webfont.ttf') format('truetype'), url('../plugins/weather-icons/font/weathericons-regular-webfont.svg#weathericons-regular-webfontRg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -12659,7 +12659,7 @@ h6 {
   visibility: visible;
   z-index: 9;
   opacity: 1;
-  cursor: url('../../globals/img/cursor-close.png'), auto;
+  cursor: url('../img/cursor-close.png'), auto;
 }
 /*
 4.6 - Layer Menu
@@ -14500,7 +14500,7 @@ button.toast-close-button {
     width: 100%;
     height: 100%;
     z-index: 1;
-    cursor: url('../../globals/img/cursor-close-dark.png'), auto;
+    cursor: url('../img/cursor-close-dark.png'), auto;
   }
   .user-layer .tab-content #messages .message-send-container {
     visibility: hidden !important;

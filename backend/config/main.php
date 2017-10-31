@@ -10,7 +10,6 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
-    'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
         'request' => [
@@ -53,6 +52,16 @@ return [
                         '@backend/themes/basis/views'
                     ]
                 ],
+            ],
+        ],
+    ],
+    'as access' => [
+        'class' => 'yii\filters\AccessControl',
+        'except' => ['auth/login', 'site/error'],
+        'rules' => [
+            [
+                'allow' => true,
+                'roles' => ['admin'],
             ],
         ],
     ],

@@ -1,4 +1,5 @@
 <?php
+
 namespace common\models\repositories\base;
 
 /**
