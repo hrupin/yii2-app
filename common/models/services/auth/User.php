@@ -1,6 +1,7 @@
 <?php
 namespace common\models\services\auth;
 
+use common\models\forms\auth\LoginForm;
 use Yii;
 use common\models\entities\auth\Login;
 use common\models\entities\auth\Signup;
@@ -27,7 +28,18 @@ class User extends EntitiesUser
         }
     }
 
-    public static function loginAfterSignup(SignupForm $form){
+    public static function login(LoginForm $form){
+        $user = Login::doLogin(
+            $form->username,
+            $form->password
+        );
+        if($user){
+            return Yii::$app->user->login($user, $form->rememberMe ? 3600 * 24 * 30 : 0);
+        }
+        return false;
+    }
+
+    public static function firstSignup(SignupForm $form){
         $user = Login::doLogin(
             $form->username,
             $form->password
