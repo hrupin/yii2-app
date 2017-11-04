@@ -48,8 +48,11 @@ class AuthController extends Controller
         $form = new SignupForm();
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             if (User::signup($form) && User::loginAfterSignup($form)) {
+                // TODO Here it is necessary to implement a message about the successful registration and authorization by the alert. Also, depending on the project settings, enter the confirmation mail
+                // TODO Here it is necessary to implement the phone verification via SMS
                 return $this->goHome();
             }
+            // TODO Here it is necessary to implement the error output of registration and authorization via alert
         }
         return $this->render('signup', [
             'form' => $form,
