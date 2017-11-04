@@ -1,5 +1,5 @@
 <?php
-namespace common\models\repositories\user;
+namespace common\models\repositories\auth;
 
 /**
  * This is the ActiveQuery class for [[User]].
@@ -8,10 +8,10 @@ namespace common\models\repositories\user;
  */
 class UserQuery extends \yii\db\ActiveQuery
 {
-    /*public function active()
+    public function findByUsernameOrEmail($value)
     {
-        return $this->andWhere('[[status]]=1');
-    }*/
+        return $this->andWhere(['or', ['username' => $value], ['email' => $value]])->one();
+    }
 
     /**
      * @inheritdoc

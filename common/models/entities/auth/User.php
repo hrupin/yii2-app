@@ -1,15 +1,16 @@
 <?php
 
-namespace common\models\entities\user;
+namespace common\models\entities\auth;
 
 use Yii;
+use yii\web\IdentityInterface;
 use yii\base\NotSupportedException;
-use common\models\forms\user\User as FormUser;
+use common\models\forms\auth\UserForm;
 
 /**
  * Entities User
  */
-class User extends FormUser
+class User extends UserForm implements IdentityInterface
 {
 
     public static function findIdentity($id)
@@ -136,6 +137,10 @@ class User extends FormUser
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+
+    public function getIsActive(){
+        return $this->status === self::STATUS_ACTIVE;
     }
 
 }

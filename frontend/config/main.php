@@ -17,7 +17,7 @@ return [
             'class' => 'common\models\entities\base\AppRequest'
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
+            'identityClass' => 'common\models\services\auth\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
         ],

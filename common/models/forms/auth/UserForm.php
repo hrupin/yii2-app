@@ -1,8 +1,9 @@
 <?php
-namespace common\models\forms\user;
+namespace common\models\forms\auth;
 
 use Yii;
-use common\models\repositories\user\UserQuery;
+use yii\db\ActiveRecord;
+use common\models\repositories\auth\UserQuery;
 
 /**
  * This is the model class for table "user".
@@ -17,7 +18,7 @@ use common\models\repositories\user\UserQuery;
  * @property int $created_at
  * @property int $updated_at
  */
-class User extends \yii\db\ActiveRecord
+class UserForm extends ActiveRecord
 {
 
     const STATUS_DELETED = 0;

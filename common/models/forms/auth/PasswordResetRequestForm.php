@@ -1,9 +1,9 @@
 <?php
 
-namespace common\models\forms;
+namespace common\models\forms\auth;
 
 use yii\base\Model;
-use common\models\entities\user\User;
+use common\models\entities\auth\User;
 /**
  * Password reset request form
  */

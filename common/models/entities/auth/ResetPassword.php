@@ -1,8 +1,8 @@
 <?php
 
-namespace common\models\entities\user;
+namespace common\models\entities\auth;
 
-use common\models\forms\user\ResetPasswordForm;
+use common\models\forms\auth\ResetPasswordForm;
 use yii\base\InvalidParamException;
 
 class ResetPassword extends ResetPasswordForm
