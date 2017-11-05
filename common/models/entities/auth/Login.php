@@ -9,7 +9,6 @@ use common\models\entities\auth\User;
 class Login extends LoginForm
 {
 
-
     /**
      * Logs in a user using the provided username and password.
      *
@@ -18,11 +17,15 @@ class Login extends LoginForm
     public static function doLogin($username, $password)
     {
         $user = User::find()->findByUsernameOrEmail($username);
-        if(!$user->validatePassword($password)){
+        if (!$user) {
             throw new \DomainException('Undefined user or password.');
         }
-        if (!$user || !$user->isActive) {
-            throw new \DomainException('Undefined user or password.');
+        // TODO Here it is necessary to connect the setting of confirmation of mail and phone
+        if(!$user->isActive){
+            throw new \DomainException('Your account is not activated.');
+        }
+        if(!$user->validatePassword($password)){
+            throw new \DomainException('Incorrect password.');
         }
         return $user;
     }

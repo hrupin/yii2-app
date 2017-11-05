@@ -17,7 +17,7 @@ use common\models\repositories\base\LanguagesQuery;
  * @property int $updated_at
  * @property int $created_at
  */
-class Languages extends \yii\db\ActiveRecord
+class LanguagesForm extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

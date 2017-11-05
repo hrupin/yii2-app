@@ -3,6 +3,7 @@
 namespace common\models\forms\auth;
 
 use yii\base\Model;
+use common\models\entities\auth\User;
 
 /**
  * Login form
@@ -24,9 +25,25 @@ class LoginForm extends Model
             [['username', 'password'], 'required'],
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
-            // password is validated by validatePassword()
-            ['password', 'validatePassword'],
+            ['username', 'validateUsername'],
+            ['password', 'validatePassword']
         ];
+    }
+
+    public function validateUsername($attribute, $params){
+        $user = User::find()->findByUsernameOrEmail($this->username);
+        if (!$user) {
+            $this->addError($attribute, 'Undefined user.');
+        }
+    }
+
+    public function validatePassword($attribute, $params){
+        if (!$this->hasErrors()) {
+            $user = User::find()->findByUsernameOrEmail($this->username);
+            if (!$user || !$user->validatePassword($this->password)) {
+                $this->addError($attribute, 'Incorrect password.');
+            }
+        }
     }
 
 }

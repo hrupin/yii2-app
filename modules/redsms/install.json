@@ -1,0 +1,11 @@
+{
+  "name": "RedSMS",
+  "migrationsPath": "/redsms/migrations",
+  "type": 1,
+  "acts": 1,
+  "dataSettings": {
+    "class": "redsms\\Module",
+    "login": "Insert login RedSMS",
+    "apiKey": "Insert API key"
+  }
+}

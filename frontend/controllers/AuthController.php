@@ -3,10 +3,9 @@ namespace frontend\controllers;
 
 use Yii;
 use yii\web\Controller;
-use common\models\entities\auth\Login;
 use common\models\forms\auth\LoginForm;
 use common\models\forms\auth\SignupForm;
-use common\models\services\auth\User;
+use common\models\services\auth\UserService;
 
 /**
  * User controller
@@ -25,12 +24,12 @@ class AuthController extends Controller
             return $this->goHome();
         }
         $form = new LoginForm();
-        if ($form->load(Yii::$app->request->post())) {
-            Login::login($form);
+        if ($form->load(Yii::$app->request->post()) && $form->validate()) {
+            UserService::login($form);
             return $this->goBack();
         } else {
             return $this->render('login', [
-                'model' => $form,
+                'form' => $form,
             ]);
         }
     }
@@ -47,7 +46,7 @@ class AuthController extends Controller
         }
         $form = new SignupForm();
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
-            if (User::signup($form) && User::loginAfterSignup($form)) {
+            if (UserService::signup($form) && UserService::firstSignin($form)) {
                 // TODO Here it is necessary to implement a message about the successful registration and authorization by the alert. Also, depending on the project settings, enter the confirmation mail
                 // TODO Here it is necessary to implement the phone verification via SMS
                 return $this->goHome();

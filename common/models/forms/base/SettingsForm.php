@@ -17,7 +17,7 @@ use common\models\repositories\base\SettingsQuery;
  * @property int $updated_at
  * @property int $created_at
  */
-class Settings extends \yii\db\ActiveRecord
+class SettingsForm extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

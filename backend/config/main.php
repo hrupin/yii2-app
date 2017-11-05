@@ -16,7 +16,7 @@ return [
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
-            'identityClass' => 'common\models\services\auth\User',
+            'identityClass' => 'common\models\services\auth\UserService',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
@@ -57,11 +57,11 @@ return [
     ],
     'as access' => [
         'class' => 'yii\filters\AccessControl',
-        'except' => ['auth/login', 'site/error'],
+        'except' => ['site/login', 'site/error'],
         'rules' => [
             [
                 'allow' => true,
-                'roles' => ['admin'],
+                'roles' => ['admin', '@'],
             ],
         ],
     ],

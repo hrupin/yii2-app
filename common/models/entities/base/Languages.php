@@ -3,9 +3,9 @@
 namespace common\models\entities\base;
 
 use Yii;
-use common\models\forms\base\Languages as ARLanguages;
+use common\models\forms\base\LanguagesForm;
 
-class Languages extends ARLanguages
+class Languages extends LanguagesForm
 {
 
     static $current = null;

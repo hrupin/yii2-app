@@ -8,7 +8,7 @@ use common\models\entities\auth\Signup;
 use common\models\forms\auth\SignupForm;
 use \common\models\entities\auth\User as EntitiesUser;
 
-class User extends EntitiesUser
+class UserService extends EntitiesUser
 {
 
     public static function signup(SignupForm $form)
@@ -39,7 +39,7 @@ class User extends EntitiesUser
         return false;
     }
 
-    public static function firstSignup(SignupForm $form){
+    public static function firstSignin(SignupForm $form){
         $user = Login::doLogin(
             $form->username,
             $form->password

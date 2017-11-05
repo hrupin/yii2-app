@@ -33,9 +33,9 @@ class ModuleManager extends Component implements BootstrapInterface
         ]);
         Yii::$app->getModule('welcome')->bootstrap(Yii::$app);
         */
-        Yii::$app->setModule('hello', [
-            'class' => 'common\modules\hello\Module'
-        ]);
-        Yii::$app->getModule('hello')->bootstrap(Yii::$app);
+//        Yii::$app->setModule('hello', [
+//            'class' => 'common\modules\hello\Module'
+//        ]);
+//        Yii::$app->getModule('hello')->bootstrap(Yii::$app);
     }
 }
